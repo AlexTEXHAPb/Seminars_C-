@@ -1,62 +1,57 @@
-﻿// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
 
-// a = 5; b = 7 -> max = 7
-// a = 2 b = 10 -> max = 10
-// a = -9 b = -3 -> max = -3
+// Console.WriteLine("Введите любое число A");
+// int A = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите любое число B");
+// int B = Convert.ToInt32(Console.ReadLine());
+// int result = Convert.ToInt32(Math.Pow(A, B));
+// Console.WriteLine(result);
 
-// int num1 = 0;
-// int num2 = 0;
-// Console.WriteLine("Введите первое число");
-// num1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите второе число");
-// num2 = Convert.ToInt32(Console.ReadLine());
-// if (num1 > num2) Console.Write($"{num1} - большее,   {num2} - меньшее");
-// else Console.Write($"{num2} - большее,   {num1} - меньшее");
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
 
-// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-
-// 2, 3, 7 -> 7
-// 44 5 78 -> 78
-// 22 3 9 -> 22
-
-// int max = 0;
-// int[] Num = new int[3];
-// Console.WriteLine("Введите три числа");
-// for (int i = 0; i < Num.Length; i++)
-// {
-//     Num[i] = Convert.ToInt32(Console.ReadLine());
-//     if (Num[i] > max)
-//         max = Num[i];
-// }
-// Console.WriteLine($"{max} - Максимальное число");
-
-// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
-
-// 4 -> да
-// -3 -> нет
-// 7 -> нет
-
-// Console.WriteLine("Введите число");
-// int num = Convert.ToInt32(Console.ReadLine());
-// if (num % 2 == 0) Console.WriteLine("Четное");
-// else Console.WriteLine("Нечетное");
-
-// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-
-// 5 -> 2, 4
-// 8 -> 2, 4, 6, 8
-
-Console.WriteLine("Введите число > 2");
-int num = Convert.ToInt32(Console.ReadLine());
-int i = 2;
-while (i <= num)
+int Summa(int num)
 {
-    if (i % 2 == 0) Console.Write(i + " ");
-    i++;
+    int res = 0;
+    int temp = num;
+    while (temp > 1)
+    {
+        int x = temp % 10;
+        temp = temp / 10;
+        res = res + x;
+    }
+    return res;
 }
 
-// Задача 7 HARD по желанию - идет за 2 необязательных Напишите программу, которая принимает на вход целое число любой разрядности и на выходе показывает вторую цифру слева этого числа или говорит, что такой цифры нет. Через строку решать нельзя.
-// 456111 -> 5
-// 78 -> 8
-// 9146548 -> 1
-// 3 -> нет
+try
+{
+    System.Console.WriteLine("Введите натуральное число");
+    int num = Convert.ToInt32(Console.ReadLine());
+    System.Console.WriteLine($"сумма цифр в числе {num} равна {Summa(num)}");
+}
+catch
+{
+    System.Console.WriteLine("Надо вводить именно целое число!!!");
+}
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+// void PrintArray(int [] numbers)
+// {
+//     for (int x = 0; x < 8; x++)
+//     System.Console.Write($" {numbers[x]}");
+//     Console.WriteLine();
+// }
+
+// Задача 26 HARD Напишите программу, которая принимает на вход целое или дробное число и выдаёт количество цифр в числе.
+// 456 -> 3
+// 0 -> 1
+// 89,126 -> 5
+// 0,001->4
