@@ -1,62 +1,220 @@
-﻿// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
 
-// a = 5; b = 7 -> max = 7
-// a = 2 b = 10 -> max = 10
-// a = -9 b = -3 -> max = -3
-
-// int num1 = 0;
-// int num2 = 0;
-// Console.WriteLine("Введите первое число");
-// num1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите второе число");
-// num2 = Convert.ToInt32(Console.ReadLine());
-// if (num1 > num2) Console.Write($"{num1} - большее,   {num2} - меньшее");
-// else Console.Write($"{num2} - большее,   {num1} - меньшее");
-
-// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-
-// 2, 3, 7 -> 7
-// 44 5 78 -> 78
-// 22 3 9 -> 22
-
-// int max = 0;
-// int[] Num = new int[3];
-// Console.WriteLine("Введите три числа");
-// for (int i = 0; i < Num.Length; i++)
+// int Read(string message) // Метод ввода
 // {
-//     Num[i] = Convert.ToInt32(Console.ReadLine());
-//     if (Num[i] > max)
-//         max = Num[i];
+//     Console.WriteLine(message);
+//     return Convert.ToInt32(Console.ReadLine());
 // }
-// Console.WriteLine($"{max} - Максимальное число");
 
-// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+// void FillArray(double[,] array) // Метод заполнения и вывода на экран массива со случайными вещественными числами
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(-100,100)/10.0;
+//             System.Console.Write($"{array[i, j],6} ");
+//         }
+//     System.Console.WriteLine();
+//     }
+// }
 
-// 4 -> да
-// -3 -> нет
-// 7 -> нет
+// Console.Clear();
+// int rows = Read("Введите количество строк массива");
+// int colums = Read("Введите количество столбцов массива");
+// double[,] RndArray = new double[rows, colums];
+// FillArray(RndArray);
 
-// Console.WriteLine("Введите число");
-// int num = Convert.ToInt32(Console.ReadLine());
-// if (num % 2 == 0) Console.WriteLine("Четное");
-// else Console.WriteLine("Нечетное");
+// Задача 50. Напишите программу, которая на вход принимает значение элемента в двумерном массиве, 
+// и возвращает позицию этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 17 -> такого числа в массиве нет
 
-// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+// int Read(string message) // Метод ввода
+// {
+//     Console.WriteLine(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
-// 5 -> 2, 4
-// 8 -> 2, 4, 6, 8
+// void FillArray(int[,] array) // Метод заполнения и вывода на экран массива со случайными числами 
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(-100, 100);
+//             System.Console.Write($"{array[i, j],4} ");
+//         }
+//     System.Console.WriteLine();
+//     }
+// }
 
-Console.WriteLine("Введите число > 2");
-int num = Convert.ToInt32(Console.ReadLine());
-int i = 2;
-while (i <= num)
+// void FindElement(int[,] array, int find) // Метод поиска элемента массива
+// {
+//     int flag =0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j] == find)
+//                 {
+//                 System.Console.Write($"Позиция элемента в массиве: строка {i+1}, столбец {j+1}.");
+//                 System.Console.WriteLine();
+//                 flag = 1;
+//                 }
+//         }
+//     if (flag == 0)
+//     System.Console.Write("Такого элемента в массивеи нет.");
+// }
+
+// Console.Clear();
+// int rows = Read("Введите количество строк массива");
+// int colums = Read("Введите количество столбцов массива");
+// int[,] RndArray = new int[rows, colums];
+// FillArray(RndArray);
+// int element = Read("Введите значение искомого элемента массива");
+// FindElement(RndArray, element);
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+// int Read(string message) // Метод ввода
+// {
+//     Console.WriteLine(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// void FillArray(int[,] array) // Метод заполнения и вывода на экран массива из целых чисел 
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(-100, 100);
+//             System.Console.Write($"{array[i, j],6} ");
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
+
+// void PrintAvr(int[,] array) // Метод вывода среднего арифметического элементов в каждом столбце
+// {
+//     System.Console.WriteLine("Cреднее арифметическое элементов в каждом столбце:");
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         double sum = 0;
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             sum += array[i, j];
+//         }
+//         Console.Write($"{Math.Round((sum / array.GetLength(0)), 1),6} ");
+//     }
+// }
+
+// Console.Clear();
+// int rows = Read("Введите количество строк массива");
+// int colums = Read("Введите количество столбцов массива");
+// int[,] RndArray = new int[rows, colums];
+// FillArray(RndArray);
+// PrintAvr(RndArray);
+
+// Задача HARD SORT необязательная. Считается за три обязательных
+// Задайте двумерный массив из целых чисел. Количество строк и столбцов задается с клавиатуры. 
+// Отсортировать элементы по возрастанию слева направо и сверху вниз.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 10 3
+// После сортировки
+// 1 2 3 4
+// 5 7 9 10
+
+void SortArray(int[,] array)
 {
-    if (i % 2 == 0) Console.Write(i + " ");
-    i++;
+    int[] array1 = new int[array.GetLength(0) * array.GetLength(1)];
+    int z = 0;
+    int[,] arraySort = new int[array.GetLength(0), array.GetLength(1)];
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array1[z] = array[i, j];
+            z++;
+        }
+    Console.WriteLine("Отсортированный массив: ");
+    for (int i = 0; i < array1.Length; i++)
+    {
+        for (int j = 0; j < array1.Length - 1 - i; j++)
+        {
+            if (array1[j] > array1[j + 1])
+            {
+                (array1[j], array1[j + 1]) = (array1[j + 1], array1[j]);
+            }
+        }
+    }
+    z = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            arraySort[i, j] = array1[z];
+            z++;
+            Console.Write($" {arraySort[i, j],3}");
+        }
+        System.Console.WriteLine();
+    }
 }
 
-// Задача 7 HARD по желанию - идет за 2 необязательных Напишите программу, которая принимает на вход целое число любой разрядности и на выходе показывает вторую цифру слева этого числа или говорит, что такой цифры нет. Через строку решать нельзя.
-// 456111 -> 5
-// 78 -> 8
-// 9146548 -> 1
-// 3 -> нет
+void FillArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+            array[i, j] = new Random().Next(-30, 30);
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            System.Console.Write($"{array[i, j],3} ");
+        }
+        System.Console.WriteLine();
+    }
+}
+Console.WriteLine("Введите количество строк");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов");
+int cols = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[rows, cols];
+FillArray(array);
+PrintArray(array);
+SortArray(array);
+
+// задача 2 HARD необязательная. Считается за четыре обязательных ) то есть три этих и одна с будущего семинара
+// Сгенерировать массив случайных целых чисел размерностью m*n (размерность вводим с клавиатуры), причем чтоб количество элементов было четное. 
+// Вывести на экран красивенько таблицей. Перемешать случайным образом элементы массива, причем чтобы каждый элемент гарантированно
+// и только один раз переместился на другое место и выполнить перемешивание за m*n / 2 итераций. То есть если массив три на четыре, 
+// то надо выполнить за 6 итераций. И далее в конце опять вывести на экран как таблицу.
+// например, на входе массив 2*3
+// 2 3 5
+// 1 9 4
+// первая итерация перемешивания - выбрали индексы 0, 0 и 1, 2 случайный образом, поменяли ячейки
+// 4 3 5
+// 1 9 2
+// вторая итерация - индексы 0, 0 и 1, 2 не трогаем, так как это уже перемещенные ячейки, 
+// выбираем случайным образом из оставшихся ячеек, выбрали ячейки 0, 1 и 0, 2, поменяли значения
+// 4 5 3
+// 1 9 2
+// третья итерация - теперь остались только ячейки 1, 0 и 1, 1, меняем их местами
+// 4 5 3
+// 9 1 2
