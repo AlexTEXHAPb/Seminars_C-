@@ -1,0 +1,15 @@
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\bin\Debug\net6.0\Homework_sem_9.exe
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\bin\Debug\net6.0\Homework_sem_9.deps.json
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\bin\Debug\net6.0\Homework_sem_9.runtimeconfig.json
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\bin\Debug\net6.0\Homework_sem_9.dll
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\bin\Debug\net6.0\Homework_sem_9.pdb
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.csproj.AssemblyReference.cache
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.GeneratedMSBuildEditorConfig.editorconfig
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.AssemblyInfoInputs.cache
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.AssemblyInfo.cs
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.csproj.CoreCompileInputs.cache
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.dll
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\refint\Homework_sem_9.dll
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.pdb
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\Homework_sem_9.genruntimeconfig.cache
+F:\Учеба\GeekBrains\Курс\5. Знакомство с языками программирования\Семинар 9\Homework_sem_9\obj\Debug\net6.0\ref\Homework_sem_9.dll
